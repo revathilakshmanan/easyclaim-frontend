@@ -33,8 +33,9 @@ metadata:
     name: easyclaim-frontend-service
 spec:
   ports:
-    - port: 8080
+    - port: 80
       targetPort: 80
+      nodeport: 320001
   selector:
     name: easyclaim-frontend-pod
-  type: ClusterIP
+  type: NodePort
