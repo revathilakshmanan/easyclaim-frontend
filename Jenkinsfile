@@ -58,6 +58,11 @@ pipeline {
                 )
 	    }
 	}
+	stage('Deloy') {
+		steps {
+		    sh "kubectl get all"	
+		}
+	}   
 	
 	}
   }       
