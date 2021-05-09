@@ -1,10 +1,7 @@
 ---
 - name: Create pods using deployment 
-  hosts: master
+  hosts: localhost
   tasks:
-  - name: copy deployment file
-    copy: src="./frontend-deployment.yml" dest="frontend-deployment.yml"
-
   - name: create a deployment
     command: kubectl apply -f frontend-deployment.yml
  
