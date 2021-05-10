@@ -58,9 +58,9 @@ pipeline {
                 )
 	    }
 	}
-	stage('Deloy') {
+	stage('Deloy to kubernets') {
 		steps {
-		    sh "kubectl get all"	
+		    sh "ansible-playbook deploy-playbook.yml"	
 		}
 	}   
 	
