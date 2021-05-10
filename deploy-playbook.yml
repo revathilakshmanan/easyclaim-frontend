@@ -4,7 +4,7 @@
   connection: local
   tasks:
   - name: create a deployment
-    command: kubectl apply -f frontend-deployment.yml
+    command: kubectl apply -f frontend-deployment.yml --namespace=capstone
  
   - name: update deployment with new pods if image updated in docker hub
-    command: kubectl rollout restart deployment.v1.apps/easyclaim-frontend 
+    command: kubectl rollout restart deployment.v1.apps/easyclaim-frontend -n capstone
