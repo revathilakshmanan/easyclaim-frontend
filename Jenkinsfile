@@ -26,7 +26,7 @@ pipeline {
 	    }
 	   stage('Functional Testing') {
 	    steps{
-	            sh "docker run --name easyclaim-frontend -d -p 90:80 revathilakshmanan/easyclaim-frontend:${env.BUILD_ID}"
+	            sh "docker run --name easyclaim-frontendapp -d -p 80:80 revathilakshmanan/easyclaim-frontend:${env.BUILD_ID}"
 		    sh "pytest -v -s --html=functional_result_${env.BUILD_ID}.html testing/test_pytest.py"
 	        }
 	    }
