@@ -24,12 +24,12 @@ pipeline {
 	            sh "docker build -t revathilakshmanan/easyclaim-frontend:${env.BUILD_ID} ."
 	        }
 	    }
-	   /* stage('Functional Testing') {
+	   stage('Functional Testing') {
 	    steps{
-	            sh "docker run --name easyclaim-frontend -d -p 80:80 vigneshsweekaran/easyclaim-frontend:${env.BUILD_ID}"
+	            sh "docker run --name easyclaim-frontend -d -p 80:80 revathilakshmanan/easyclaim-frontend:${env.BUILD_ID}"
 		    sh "pytest -v -s --html=functional_result_${env.BUILD_ID}.html testing/test_pytest.py"
 	        }
-	    } */
+	    }
 	    stage('Pushing Docker Image to DockerHub') {
                 steps {
                     script {
