@@ -1,4 +1,4 @@
-from selenium import webdriver
+#from selenium import webdriver
 #driver.implicitly_wait(10)
 from selenium.webdriver.chrome.options import Options
 
