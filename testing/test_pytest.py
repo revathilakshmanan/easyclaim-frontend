@@ -1,6 +1,6 @@
-from selenium import webdriver
+# from selenium import webdriver
 #driver.implicitly_wait(10)
-# from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.options import Options
 
 option=Options()
 option.add_argument("--headless")   
