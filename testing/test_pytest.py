@@ -16,8 +16,8 @@ def test_login():
     driver.implicitly_wait(10)
     driver.get('http://localhost:80')
     driver.maximize_window()
-    driver.find_element_by_id("username").send_keys('vishnu')
-    driver.find_element_by_id('pwd').send_keys('vishnu@123')
+    driver.find_element_by_id("username").send_keys('test')
+    driver.find_element_by_id('pwd').send_keys('test')
     driver.find_element_by_xpath('/html/body/app-root/app-login/div/div/form/button').click()
     print(driver.title)
 def test_title_check():
